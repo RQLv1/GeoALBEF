@@ -21,7 +21,7 @@ Activate the environment
     conda activate geoalbef
 
 ## **Pre-trained model and data download**
-data/smiles.json train_dataloader.pth valid_dataloader.pth test_dataloader.pth geomodel.pth dataloader.pth downloaded from https://zenodo.org/uploads/14177593
+data/smiles.json train_dataloader.pth valid_dataloader.pth test_dataloader.pth geomodel.pth dataloader.pth downloaded from https://zenodo.org/uploads/14882749
 Place the data and pre-training files in the following directory structure
 
 GeoALBEF-main/  
