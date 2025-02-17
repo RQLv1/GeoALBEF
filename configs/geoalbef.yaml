@@ -1,0 +1,39 @@
+#Train data settings
+smiles_file: 'data/smiles.json'
+batch_size: 32
+queue_size: 64
+
+#ALBEF model settings
+#text encoder
+bert_config: 'configs/config_bert.json'
+
+#vision encoder
+atom_dim: 83
+bond_dim: 17
+bond_angle_dim: 10
+dihedral_angle_dim: 10 
+vision_width: 768
+
+#distillation
+embed_dim: 768
+temp: 0.07
+momentum: 0.995
+alpha: 0.4
+
+
+#mlm settings
+mlm_probability: 0.15
+
+#seed
+seed: 42
+
+#checkpoint
+start_epoch: 0
+
+
+
+
+
+
+
+
