@@ -2,7 +2,7 @@
 ## About
 This repository contains the code and resources of the following paper:
 
-Multimodal modeling for polymer property prediction
+Multimodal modeling for polymer property prediction and decoupling of structure-property relationships
 
 ## Overview of the framework
 By integrating the chemical semantic sequence information with the intrinsic and spatial information of polymers, a deep neural network architecture with cross-modal interaction capability was developed. 
