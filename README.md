@@ -31,6 +31,7 @@ GeoALBEF-main/
 ├── dataloader/  
 ├── models/  
 ├── tokenizer_cased/    
+├── visual/     
 ├── train_dataloader.pth    
 ├── valid_dataloader.pth    
 ├── test_dataloader.pth  
@@ -64,6 +65,45 @@ Execute the command:
     cd your_download_path\GeoALBEF-main
     python property_test.py --name geoalbef --seed 42 --pretrain_path geomodel.pth --mode finetune --data_path mod_data.csv --is_get_dataloader false
 
+## **Structure-property plot**
+Fine-tune the model to get the optimal model saved under each property .pth file or download from https://zenodo.org/records/14958954
+
+Save it in the following directory:
+
+GeoALBEF-main/  
+├── data/  
+│ ├── smiles.json   
+├── configs/     
+├── dataloader/  
+├── models/  
+├── tokenizer_cased/    
+├── visual/  
+│ ├── only_model_ckp/  
+│ │ ├── only_model_ckp/  
+│ │ │ ├── ne_checkpoints/    
+│ │ │ │ ├── model.pth  
+└── ... 
+
+Execute the command:
+
+    cd your_download_path\GeoALBEF-main\visual
+
+    from visual import visual_attn
+
+    decoder_path = r'only_model_ckp'
+    smiles = '[*]CCCn1ccc(-c2ccn(CCC[*])n2)n1'
+
+    visual_attn(smiles, decoder_path)
+
+Get the image in the 2d_pic folder:
+<p align="center">
+<img  src="geoalbef_Eea_fg_attention.png"> 
+</p>
+<p align="center">
+<img  src="geoalbef_Eea_atoms_attention.png"> 
+</p>
+
+    
 ## License
 GeoALBEF is licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0.
 
